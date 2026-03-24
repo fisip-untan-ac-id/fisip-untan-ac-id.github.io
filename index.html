@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FISIP UNTAN – Fakultas Ilmu Sosial dan Ilmu Politik UNIVERSITAS TANJUNGPURA PONTIANAK</title>
+<meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+<link rel="icon" href="https://fisip.untan.ac.id/wp-content/uploads/2017/04/cropped-weblogo3-32x32.jpg" sizes="32x32" />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;font-size:15px;color:#444;background:#f5f5f5;line-height:1.6}
+a{text-decoration:none;color:inherit}
+ul{list-style:none;padding:0;margin:0}
+img{max-width:100%}
+
+/* TOP PRODI BAR */
+.top-prodi-bar{background:#1a1a2e;padding:5px 0;border-bottom:1px solid #2a2a4a;font-size:11.5px;overflow:hidden}
+.top-prodi-inner{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;flex-wrap:wrap;align-items:center}
+.top-prodi-bar a{color:#aac;padding:3px 9px;border-right:1px solid #333;font-weight:600;font-size:11px;text-transform:uppercase;transition:color .2s;white-space:nowrap}
+.top-prodi-bar a:first-child{border-left:1px solid #333}
+.top-prodi-bar a:hover{color:#f0a500}
+
+/* SITE HEADER */
+.site-header{background:#fff;border-bottom:3px solid #e8e8e8;padding:0;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.header-wrap{max-width:1170px;margin:0 auto;padding:14px 15px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.site-branding{display:flex;align-items:center;gap:14px}
+.site-logo img{height:80px;width:auto;display:block}
+.site-title{font-family:'Raleway',sans-serif;font-size:23px;font-weight:800;color:#0a2254;letter-spacing:.5px;line-height:1.1;display:block}
+.site-tagline{font-size:11.5px;color:#666;font-weight:400;margin-top:2px;display:block}
+.site-tagline strong{color:#0a2254;font-weight:700}
+.header-search-box{display:flex;align-items:center}
+.header-search-box input{border:1.5px solid #ccc;border-right:none;padding:7px 13px;font-size:13px;border-radius:3px 0 0 3px;outline:none;width:200px;font-family:'Lato',sans-serif}
+.header-search-box input:focus{border-color:#0a2254}
+.header-search-box button{background:#0a2254;color:#fff;border:none;padding:7px 14px;border-radius:0 3px 3px 0;cursor:pointer;font-size:13px;transition:background .2s}
+.header-search-box button:hover{background:#1a3a6e}
+
+/* MAIN NAV */
+.main-nav-wrap{background:#0a2254;position:sticky;top:0;z-index:9999;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.nav-container{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;align-items:stretch}
+.nav-container>.menu{display:flex;align-items:stretch}
+.nav-container>.menu>li{position:relative}
+.nav-container>.menu>li>a{display:flex;align-items:center;gap:5px;padding:14px 14px;color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;border-right:1px solid rgba(255,255,255,.1);transition:background .2s;font-family:'Lato',sans-serif}
+.nav-container>.menu>li:first-child>a{border-left:1px solid rgba(255,255,255,.1)}
+.nav-container>.menu>li>a:hover,.nav-container>.menu>li.current>a{background:#e8a000;color:#fff}
+.menu-toggle{display:none;background:none;border:none;color:#fff;font-size:22px;padding:12px 15px;cursor:pointer;margin-left:auto}
+
+/* DROPDOWN */
+.nav-container>.menu>li .sub-menu{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:230px;box-shadow:0 5px 18px rgba(0,0,0,.18);border-top:3px solid #e8a000;z-index:10000}
+.nav-container>.menu>li:hover>.sub-menu{display:block}
+.sub-menu li{position:relative}
+.sub-menu li a{display:block;padding:9px 16px;font-size:12.5px;color:#0a2254;border-bottom:1px solid #f0f0f0;transition:background .15s,padding-left .15s;font-weight:500}
+.sub-menu li a:hover{background:#f5f7fa;color:#e8a000;padding-left:22px}
+.sub-menu li .sub-menu{display:none;position:absolute;top:0;left:100%;background:#fff;min-width:220px;box-shadow:3px 5px 18px rgba(0,0,0,.15);border-top:3px solid #e8a000;z-index:10001}
+.sub-menu li:hover>.sub-menu{display:block}
+
+/* HERO */
+.hero-section{background:#0a2254;position:relative;overflow:hidden}
+.slider-container{position:relative;width:100%;height:390px}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.slide.active{opacity:1}
+.slide-bg{width:100%;height:100%;object-fit:cover;display:block}
+.slide-bg-fallback{width:100%;height:100%;display:none;align-items:center;justify-content:center;font-size:70px;color:rgba(255,255,255,.12)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,20,60,.82) 0%,rgba(5,20,60,.32) 55%,transparent 100%);display:flex;align-items:flex-end;padding:34px 50px}
+.hero-text h2{color:#fff;font-family:'Raleway',sans-serif;font-size:24px;font-weight:800;line-height:1.35;max-width:680px;text-shadow:0 2px 8px rgba(0,0,0,.5);margin-bottom:7px}
+.hero-text p{color:rgba(255,255,255,.82);font-size:14px;max-width:580px}
+.slider-prev,.slider-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.38);color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
+.slider-prev{left:15px}.slider-next{right:15px}
+.slider-prev:hover,.slider-next:hover{background:#e8a000}
+.slider-dots-wrap{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:10}
+.slider-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .3s;border:none}
+.slider-dot.active{background:#e8a000}
+
+/* BANNER ROW */
+.banner-row{background:#fff;border-bottom:1px solid #e8e8e8;padding:9px 0}
+.banner-row-inner{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.banner-row a{display:block;transition:opacity .2s,transform .2s}
+.banner-row a:hover{opacity:.75;transform:scale(1.05)}
+.banner-row img{height:36px;width:auto;display:block}
+
+/* WBBM */
+.wbbm-section{background:linear-gradient(135deg,#0a2254 0%,#1a3a6e 100%);padding:18px 0;text-align:center;color:#fff}
+.wbbm-section h2{font-family:'Raleway',sans-serif;font-size:16px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+.wbbm-section .wbbm-sub{font-size:12px;color:rgba(255,255,255,.72);margin-top:2px}
+.wbbm-section a.zi-link{display:inline-block;background:#e8a000;color:#fff;font-size:11.5px;font-weight:700;padding:4px 14px;border-radius:3px;margin-top:7px;transition:background .2s}
+.wbbm-section a.zi-link:hover{background:#c88900}
+
+/* CONTENT */
+.content-area{max-width:1170px;margin:0 auto;padding:26px 15px;display:grid;grid-template-columns:1fr 280px;gap:28px}
+
+/* SECTION HEADING */
+.section-heading{margin-bottom:18px}
+.section-heading h2{font-family:'Raleway',sans-serif;font-size:16px;font-weight:800;color:#0a2254;text-transform:uppercase;letter-spacing:.5px;border-left:4px solid #e8a000;padding-left:10px;display:flex;align-items:center;gap:7px;line-height:1.2}
+.section-heading p{font-size:12.5px;color:#777;margin-top:4px;padding-left:14px;font-style:italic}
+
+/* NEWS GRID */
+.news-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:28px}
+.news-card{background:#fff;border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.news-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.12);transform:translateY(-2px)}
+.news-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr}
+.card-img{overflow:hidden;height:170px;background:#d8dde8;position:relative}
+.news-card.featured .card-img{height:100%;min-height:210px}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.news-card:hover .card-img img{transform:scale(1.04)}
+.card-body{padding:14px 15px 16px}
+.cat-label{display:inline-block;background:#0a2254;color:#fff;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:2px;text-transform:uppercase;margin-bottom:7px;letter-spacing:.3px}
+.news-card h3{font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;color:#0a2254;line-height:1.45;margin-bottom:7px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.news-card.featured h3{font-size:16px;-webkit-line-clamp:3}
+.news-card h3 a:hover{color:#e8a000}
+.card-excerpt{font-size:12.5px;color:#666;line-height:1.65;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:10px}
+.read-more{display:inline-block;font-size:11.5px;color:#e8a000;font-weight:700;border:1.5px solid #e8a000;padding:4px 12px;border-radius:3px;transition:background .2s,color .2s;text-transform:uppercase;letter-spacing:.3px}
+.read-more:hover{background:#e8a000;color:#fff}
+
+/* AGENDA */
+.agenda-section{background:#fff;border:1px solid #e5e5e5;border-radius:4px;padding:22px;margin-bottom:28px}
+.agenda-grid{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:start;margin-top:14px}
+.dekan-img img{width:100px;height:130px;object-fit:cover;border-radius:4px;border:2px solid #e5e5e5}
+.agenda-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.agenda-gallery a{display:block;overflow:hidden;border-radius:3px;aspect-ratio:4/3;background:#d8dde8}
+.agenda-gallery a img{width:100%;height:100%;object-fit:cover;transition:transform .35s;display:block}
+.agenda-gallery a:hover img{transform:scale(1.06)}
+.agenda-caption{margin-top:8px;font-size:11.5px;color:#888;text-align:center;grid-column:1/-1}
+
+/* AKRIN BOX */
+.akrin-box{background:#fff;border:1px solid #e5e5e5;border-radius:4px;padding:22px 24px;margin-bottom:28px;border-left:5px solid #e8a000}
+.akrin-box h2{font-family:'Raleway',sans-serif;font-size:20px;font-weight:800;color:#0a2254;letter-spacing:.3px;margin-bottom:5px}
+.akrin-box .akrin-sub{font-size:13px;color:#555;font-weight:600;margin-bottom:4px}
+.akrin-box .akrin-tag{display:inline-block;background:#e8a000;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:3px;margin-top:5px;transition:background .2s}
+.akrin-box .akrin-tag:hover{background:#c88900}
+.akrin-box p{margin-top:12px;font-size:13px;color:#666;line-height:1.75}
+.akrin-cards{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
+.akrin-card{flex:1;min-width:140px;border:1px solid #e5e5e5;border-radius:4px;padding:12px 14px;border-top:3px solid #e8a000}
+.akrin-card a{font-family:'Raleway',sans-serif;font-size:15px;font-weight:800;color:#0a2254;display:block;margin-bottom:3px}
+.akrin-card a:hover{color:#e8a000}
+.akrin-card span{font-size:12px;color:#777}
+
+/* SIDEBAR */
+.widget{background:#fff;border:1px solid #e5e5e5;border-radius:4px;overflow:hidden;margin-bottom:20px}
+.widget-header{background:#0a2254;color:#fff;padding:9px 15px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-family:'Raleway',sans-serif;display:flex;align-items:center;gap:7px}
+.widget-body{padding:10px 14px}
+.widget-body.no-pad{padding:8px 0}
+.quick-links li a{display:flex;align-items:center;gap:7px;padding:7px 14px;font-size:12.5px;color:#0a2254;border-bottom:1px solid #f0f0f0;transition:color .15s;font-weight:600}
+.quick-links li a:hover{color:#e8a000}
+.quick-links li a i{color:#e8a000;width:13px;font-size:11px}
+.archives-list li a{display:block;padding:4px 14px;font-size:12.5px;color:#0a2254;border-bottom:1px dotted #eee;transition:color .15s,padding-left .15s}
+.archives-list li a:hover{color:#e8a000;padding-left:18px}
+.rank-table{width:100%;border-collapse:collapse;font-size:13px}
+.rank-table td{padding:7px 8px;border-bottom:1px solid #eee}
+.rank-table td:last-child{text-align:right;font-weight:700;color:#0a2254}
+.presma-box a{display:block;margin-bottom:8px}
+.presma-box a:last-child{margin-bottom:0}
+.presma-box a img{width:100%;border-radius:3px;display:block}
+
+/* FOOTER */
+.site-footer{background:#0a2254;color:rgba(255,255,255,.82);padding:34px 0 0;margin-top:10px}
+.footer-inner{max-width:1170px;margin:0 auto;padding:0 15px;display:grid;grid-template-columns:2fr 1.2fr 1.2fr 1.5fr;gap:28px}
+.footer-col h3{color:#e8a000;font-family:'Raleway',sans-serif;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer-col p{font-size:13px;line-height:1.75;color:rgba(255,255,255,.72)}
+.footer-col ul li{margin-bottom:6px}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.72);display:flex;align-items:flex-start;gap:7px;transition:color .2s}
+.footer-col ul li a:hover{color:#e8a000}
+.footer-col ul li a i{color:#e8a000;flex-shrink:0;margin-top:3px;font-size:11px}
+.footer-bottom{background:rgba(0,0,0,.25);text-align:center;padding:13px 15px;margin-top:26px;font-size:12px;color:rgba(255,255,255,.55);border-top:1px solid rgba(255,255,255,.1)}
+.footer-bottom a{color:#e8a000}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .content-area{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .news-card.featured{grid-column:1/-1;grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .header-wrap{flex-direction:column;align-items:flex-start;gap:10px}
+  .header-search-box{width:100%}
+  .header-search-box input{width:100%}
+  .menu-toggle{display:flex}
+  .nav-container>.menu{display:none;flex-direction:column;width:100%}
+  .nav-container>.menu.open{display:flex}
+  .nav-container>.menu>li>a{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:12px 15px}
+  .sub-menu{position:static;box-shadow:none;border-top:none}
+  .news-grid{grid-template-columns:1fr}
+  .agenda-gallery{grid-template-columns:repeat(3,1fr)}
+  .footer-inner{grid-template-columns:1fr}
+  .hero-text h2{font-size:18px}
+  .hero-overlay{padding:20px}
+}
+@media(max-width:480px){
+  .top-prodi-bar a{font-size:10px;padding:3px 6px}
+  .site-logo img{height:56px}
+  .site-title{font-size:18px}
+  .slider-container{height:260px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP PRODI BAR -->
+<div class="top-prodi-bar">
+  <div class="top-prodi-inner">
+    <a href="https://fisip.untan.ac.id/?page_id=7713" title="Program Studi Ilmu Administrasi Publik">IAP</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7716" title="Program Studi Ilmu Politik">IPOL</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7720" title="Program Studi Ilmu Pemerintahan">IP</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7723" title="Program Studi Ilmu Komunikasi">IKOM</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7725" title="Program Studi Hubungan Internasional">HI</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7729" title="Program Studi Sosiologi">SOS</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7734" title="Program Studi Pembangunan Sosial">PEMSOS</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7736" title="Program Studi Antropologi Sosial">ANTRO</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7745" title="S2 Program Studi Sosiologi">S2 SOS</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7743" title="S2 Program Studi Ilmu Politik">S2 IPOL</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7741" title="S2 Program Studi Administrasi Publik">S2 IAP</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7750" title="Program Studi Administrasi Perkantoran">D3 AP</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7752" title="Program Studi Kesekretariatan">D3 SEKRE</a>
+    <a href="https://fisip.untan.ac.id/?page_id=7754" title="Program Studi Kearsipan">D3 ARSIP</a>
+  </div>
+</div>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="header-wrap">
+    <div class="site-branding">
+      <div class="site-logo">
+        <a href="https://fisip.untan.ac.id/">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2022/11/removal.ai_tmp-63738be724d04.png"
+               alt="FISIP UNTAN"
+               onerror="this.style.background='#0a2254';this.style.width='70px';this.style.height='70px'">
+        </a>
+      </div>
+      <div class="site-title-wrap">
+        <a href="https://fisip.untan.ac.id/">
+          <span class="site-title">FISIP UNTAN</span>
+          <span class="site-tagline">Fakultas Ilmu Sosial dan Ilmu Politik &nbsp;–&nbsp; <strong>UNIVERSITAS TANJUNGPURA PONTIANAK</strong></span>
+        </a>
+      </div>
+    </div>
+    <div class="header-search-box">
+      <form role="search" method="get" action="https://fisip.untan.ac.id/">
+        <input type="search" placeholder="Search for:" name="s">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAVIGATION -->
+<nav class="main-nav-wrap">
+  <div class="nav-container">
+    <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="menu">
+
+      <li class="current"><a href="https://fisip.untan.ac.id/">BERANDA</a></li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?page_id=751">Profil <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li><a href="https://fisip.untan.ac.id/?page_id=851">Sejarah</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=83">Visi dan Misi</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=358">Struktur Organisasi</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=6766">Pimpinan Fakultas</a></li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?page_id=1708">Personil Dosen ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?p=8999">Data Dosen</a></li>
+              <li><a href="https://fisip.untan.ac.id/?p=9048">Dosen Jurusan Ilmu Administrasi (S1)</a></li>
+              <li><a href="https://fisip.untan.ac.id/?p=9019">Dosen Jurusan Sosiologi (S1)</a></li>
+              <li><a href="https://sites.google.com/view/data-dosen-fisip-untan/home?authuser=2">Statistik Dosen</a></li>
+            </ul>
+          </li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=366">Tenaga Kependidikan (Tendik)</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=6807">Riset dan Pengabdian Kepada Masyarakat</a></li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?tag=iku">Indikator Kinerja Utama (IKU) ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?page_id=7363">IKU 1 – Mutu Lulusan</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=7490">IKU 2 – MBKM dan Prestasi Mahasiswa</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=7483">IKU 5 – Luaran Riset Dosen</a></li>
+              <li><a href="https://fisipuntan.org/profil-3/iku-7-kurikulum-case-team-base-methode/">IKU 7 – Kurikulum</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=7513">IKU 8 – Akreditasi Program Studi</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?cat=23">INFO <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li><a href="https://fisip.untan.ac.id/?cat=2">ARTIKEL</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=23">BERITA</a></li>
+          <li><a href="https://fisip.untan.ac.id/?p=6740">KABAR DIKTI</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=423">KABAR PRODI</a></li>
+          <li><a href="https://fisip.untan.ac.id/?tag=benchmarking">BENCHMARK</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?tag=featured">LAYANAN <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li><a href="https://scmb.untan.ac.id/">Penerimaan Mahasiswa Baru</a></li>
+          <li><a href="https://snpmb.bppp.kemdikbud.go.id/utbk-snbt/informasi-umum">UTBK-SNBT</a></li>
+          <li><a href="https://satu.untan.ac.id/gate/login">SIAKAD</a></li>
+          <li><a href="http://ukt.keuangan.untan.ac.id/">UKT</a></li>
+          <li><a href="http://piutang.keuangan.untan.ac.id/">PIUTANG</a></li>
+          <li><a href="http://simbuk.untan.ac.id/untan/login.html">SIMBUK</a></li>
+          <li><a href="http://bantuanstudi.untan.ac.id/">BANTUAN STUDI</a></li>
+          <li><a href="https://ktmcuti.untan.ac.id/">KTM/CUTI</a></li>
+          <li><a href="http://repositori.fisipuntan.org/slims">SPACE</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?tag=alumni">ALUMNI <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li><a href="https://ppk.untan.ac.id/">Karir</a></li>
+          <li><a href="https://ppk.untan.ac.id/?open=Info-Magang">Magang</a></li>
+          <li><a href="https://tracerstudyalumni.untan.ac.id/login">Tracer</a></li>
+          <li><a href="https://usersurvey.untan.ac.id/pertanyaan">Survey Pengguna</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=503">Beasiswa Pendidikan Indonesia</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=506">Beasiswa Non Dikti</a></li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?page_id=1373">MHS ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?page_id=4532">KampusMerdeka</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=6542">Prestasi Mahasiswa FISIP</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=6536">Data Presma</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=1387">Organisasi Mahasiswa</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?page_id=5869">DOKUMEN <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li><a href="https://fisip.untan.in/lead/index.php?module=users/login">Arsip Digital</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=6023">Bank Data</a></li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?page_id=274">Peraturan ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?page_id=268">UU Pendidikan</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=271">Peraturan ASN</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=278">Peraturan Menteri</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=282">Peraturan Dikti</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=496">Peraturan Dosen</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=302">Peraturan Pangkat</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=265">Peraturan Kepegawaian</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?tag=featured">SNPT ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?cat=534">STANDAR RISET</a></li>
+              <li><a href="https://fisip.untan.ac.id/?cat=535">STANDAR PENGABDIAN</a></li>
+              <li>
+                <a href="https://fisip.untan.ac.id/?cat=525">STANDAR PENDIDIKAN ›</a>
+                <ul class="sub-menu">
+                  <li><a href="https://fisip.untan.ac.id/?cat=529">Penilaian Pendidikan</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?cat=528">Proses Pembelajaran</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?cat=531">Sarana Prasarana</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?cat=532">Tata Kelola Pembelajaran</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=522">Gelar Akademik dan Ijazah</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=1979">KKNI</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?tag=featured">UNIT <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li>
+            <a href="https://fisip.untan.ac.id/?tag=info-akademik">Akademik ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?page_id=374">Kalender Akademik</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=372">Pedoman</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?page_id=6670">Kepegawaian (DUPAK) ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?page_id=8990">Kompetensi ASN</a></li>
+              <li><a href="https://bit.ly/pengakuan-ak-dosen">Bahan PAK</a></li>
+              <li><a href="https://fisip.untan.ac.id/?page_id=6670">Template DUPAK</a></li>
+              <li><a href="https://forms.gle/BV75b4wbj6XWTs7K9">Penyerahan PAK 2023</a></li>
+              <li><a href="https://sites.google.com/fisip.untan.ac.id/tatapamong/aturan?authuser=1">Tata Pamong</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://fisip.untan.ac.id/?page_id=370">Bidang Studi/Gelar ›</a>
+            <ul class="sub-menu">
+              <li>
+                <a href="https://fisip.untan.ac.id/?page_id=140">Bidang Studi/Gelar Sarjana ›</a>
+                <ul class="sub-menu">
+                  <li><a href="https://fisip.untan.ac.id/?page_id=140">Sarjana-Ilmu Administrasi Publik</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=751">Sarjana-Ilmu Politik</a></li>
+                  <li><a href="#">Sarjana-Ilmu Pemerintahan</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?p=3935">Sarjana-Ilmu Komunikasi</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=265">Sarjana-Hubungan Internasional</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=298">Sarjana-Sosiologi</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=287">Sarjana-Pembangunan Sosial</a></li>
+                  <li><a href="https://fisip.untan.ac.id/?page_id=518">Sarjana-Antropologi Sosial</a></li>
+                </ul>
+              </li>
+              <li><a href="https://d3.fisip.untan.ac.id">Bidang Studi/Gelar Program Diploma (D-III)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?tag=zona-integritas">WBBM <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li><a href="https://fisip.untan.ac.id/?page_id=7214">Zona Integritas – WBS KemdikbudRistek</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=7217">Zona Integritas – LAPOR</a></li>
+          <li><a href="https://sidali.kemdikbud.go.id/app">SIDALI – Sistem Info Kendali</a></li>
+          <li><a href="https://anjani.kemdikbud.go.id/">ANJANI</a></li>
+          <li><a href="https://ppid.untan.ac.id/ppid-pelaksana/fakultas-ilmu-sosial-dan-ilmu-politik/informasi-publik/informasi-yang-wajib-disediakan-dan-diumumkan-secara-berkala">PPID FISIP – Informasi Berkala</a></li>
+          <li><a href="https://ppid.untan.ac.id/ppid-pelaksana/fakultas-ilmu-sosial-dan-ilmu-politik/informasi-publik/informasi-yang-wajib-tersedia-setiap-saat">PPID FISIP – Informasi Setiap Saat</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://fisip.untan.ac.id/?tag=akreditasi">Program Studi <i class="fa fa-caret-down" style="font-size:10px;opacity:.7;"></i></a>
+        <ul class="sub-menu">
+          <li>
+            <a href="https://fisip.untan.ac.id/?cat=481">Ilmu Adm Publik ›</a>
+            <ul class="sub-menu">
+              <li><a href="https://fisip.untan.ac.id/?tag=akreditasi-iap">Akreditasi IAP</a></li>
+              <li><a href="https://fisip.untan.ac.id/?tag=dokumen-akreditasi-iap">Dokumen Akreditasi IAP</a></li>
+            </ul>
+          </li>
+          <li><a href="https://fisip.untan.ac.id/?cat=484">Ilmu Politik</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=483">Ilmu Pemerintahan</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=482">Ilmu Komunikasi</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=480">Hubungan Internasional</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=490">Sosiologi</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=489">Pembangunan Sosial</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=479">Antropologi Sosial</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=478">Administrasi Perkantoran</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=486">Kesekretariatan</a></li>
+          <li><a href="https://fisip.untan.ac.id/?cat=485">Kearsipan</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<div class="hero-section">
+  <div class="slider-container" id="mainSlider">
+
+    <div class="slide active">
+      <img class="slide-bg" src="https://fisip.untan.ac.id/wp-content/uploads/2025/01/Kerjasama-FISIP-Untan-dengan-Friedensau-Adventist-University-Jerman-1-360x240.jpg" alt="Kerjasama Friedensau" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="slide-bg-fallback" style="background:linear-gradient(135deg,#0a2254,#1a4a8a)"><i class="fa fa-handshake"></i></div>
+      <div class="hero-overlay"><div class="hero-text">
+        <h2>Fisip Untan Bermitra Friedensau Adventist University Jerman</h2>
+        <p>Langkah strategis FISIP Universitas Tanjungpura dalam pengembangan kerja sama internasional.</p>
+      </div></div>
+    </div>
+
+    <div class="slide">
+      <img class="slide-bg" src="https://fisip.untan.ac.id/wp-content/uploads/2025/01/KKM-FISIP-UNTAN-2025-360x240.webp" alt="KKM 2025" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="slide-bg-fallback" style="background:linear-gradient(135deg,#1a4a00,#2d7a00)"><i class="fa fa-users"></i></div>
+      <div class="hero-overlay"><div class="hero-text">
+        <h2>193 Mahasiswa FISIP Untan Berkolaborasi Bangun Desa</h2>
+        <p>Kuliah Kerja Mahasiswa (KKM) Tahun Anggaran 2024/2025 di Kecamatan Tayan Hilir, Kabupaten Sanggau.</p>
+      </div></div>
+    </div>
+
+    <div class="slide">
+      <img class="slide-bg" src="https://fisip.untan.ac.id/wp-content/uploads/2024/12/wsakreinternasional-360x240.webp" alt="Workshop SAR ACQUIN" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="slide-bg-fallback" style="background:linear-gradient(135deg,#4a1a00,#803000)"><i class="fa fa-clipboard-list"></i></div>
+      <div class="hero-overlay"><div class="hero-text">
+        <h2>Workshop Penyusunan SAR ACQUIN Prodi Administrasi Publik</h2>
+        <p>FISIP UNTAN menyelenggarakan workshop akreditasi internasional bersama ACQUIN.</p>
+      </div></div>
+    </div>
+
+    <div class="slide">
+      <img class="slide-bg" src="https://fisip.untan.ac.id/wp-content/uploads/2024/10/mbkm-2024-edited-scaled-1-360x240.jpeg" alt="MBKM 2024" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="slide-bg-fallback" style="background:linear-gradient(135deg,#1a005a,#3600a0)"><i class="fa fa-laptop"></i></div>
+      <div class="hero-overlay"><div class="hero-text">
+        <h2>Peluncuran MBKM Periode 2024 – 301 Mahasiswa di 60 Instansi Mitra</h2>
+        <p>MBKM FISIP UNTAN 2024 skema mandiri untuk kegiatan Magang di wilayah Pontianak dan Kubu Raya.</p>
+      </div></div>
+    </div>
+
+    <div class="slide">
+      <img class="slide-bg" src="https://fisip.untan.ac.id/wp-content/uploads/2025/03/Rektorat-Berakhlak-Fisip.jpg" alt="Rektorat Berakhlak" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="slide-bg-fallback" style="background:linear-gradient(135deg,#003a3a,#006060)"><i class="fa fa-university"></i></div>
+      <div class="hero-overlay"><div class="hero-text">
+        <h2>FISIP UNTAN – Wilayah Birokrasi Bersih Melayani (WBBM)</h2>
+        <p>Komitmen FISIP Universitas Tanjungpura menuju zona integritas dan birokrasi bersih melayani.</p>
+      </div></div>
+    </div>
+
+    <button class="slider-prev" id="sliderPrev"><i class="fa fa-chevron-left"></i></button>
+    <button class="slider-next" id="sliderNext"><i class="fa fa-chevron-right"></i></button>
+    <div class="slider-dots-wrap" id="sliderDots">
+      <button class="slider-dot active" data-i="0"></button>
+      <button class="slider-dot" data-i="1"></button>
+      <button class="slider-dot" data-i="2"></button>
+      <button class="slider-dot" data-i="3"></button>
+      <button class="slider-dot" data-i="4"></button>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER ROW -->
+<div class="banner-row">
+  <div class="banner-row-inner">
+    <a href="https://fisip.untan.ac.id/kepegawaian/kompetensi-asn/">
+      <img src="https://fisip.untan.ac.id/wp-content/uploads/2025/03/Rektorat-Berakhlak-Fisip.jpg" alt="Berakhlak" style="height:36px;object-fit:cover;border-radius:3px;width:auto">
+    </a>
+    <a href="https://www.youtube.com/watch?v=RCxLVdpjAXY">
+      <img src="https://fisip.untan.ac.id/wp-content/uploads/2025/07/orasi.jpg" alt="Orasi" style="height:36px;object-fit:cover;border-radius:3px;width:auto" onerror="this.parentElement.style.display='none'">
+    </a>
+    <a href="https://garuda.kemdikbud.go.id/journal/view/23593">
+      <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/01/garuda1.png" alt="Portal Garuda">
+    </a>
+    <a href="https://www.youtube.com/@fisipuntan65/videos">
+      <img src="https://fisip.untan.ac.id/wp-content/uploads/2023/03/youtube-logo-icon-transparent-32.png" alt="YouTube FISIP UNTAN">
+    </a>
+    <a href="https://sinta.kemdikbud.go.id/journals/profile/10550">
+      <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/01/brand_sinta.png" alt="SINTA Kemdikbud">
+    </a>
+    <a href="https://untan.ac.id/universitas-tanjungpura-masuk-daftar-20-besar-kampus-paling-berprestasi-di-indonesia/">
+      <img src="https://fisip.untan.ac.id/wp-content/uploads/2025/07/untan-berpretasi.webp" alt="Untan Berprestasi" onerror="this.parentElement.style.display='none'">
+    </a>
+  </div>
+</div>
+
+<!-- WBBM SECTION -->
+<div class="wbbm-section">
+  <div style="max-width:1170px;margin:0 auto;padding:0 15px">
+    <h2>FISIP UNTAN – Wilayah Birokrasi Bersih Melayani (WBBM)</h2>
+    <div class="wbbm-sub">Sejak 14 September 1965 &mdash; FISIP UNTAN berkomitmen menjadi Pusat Informasi di Bidang Ilmu Sosial, Politik dan Budaya di Kalimantan Barat</div>
+    <a href="https://ppid.untan.ac.id/ppid-pelaksana/fakultas-ilmu-sosial-dan-ilmu-politik" class="zi-link">zona integritas</a>
+  </div>
+</div>
+
+<!-- CONTENT AREA -->
+<div class="content-area">
+
+  <main>
+
+    <!-- AKRIN BOX -->
+    <div class="akrin-box">
+      <h2>AKRIN FISIP UNTAN</h2>
+      <p class="akrin-sub">Akreditasi Internasional S1 Ilmu Administrasi Publik dan Sosiologi</p>
+      <a href="https://www.untan.ac.id/archives/14432" class="akrin-tag">#Prodi Unggulan#</a>
+      <p>Sejak 14 September 1965 &mdash; <strong>FISIP UNTAN berkomitmen menjadi Pusat Informasi di Bidang Ilmu Sosial, Politik dan Budaya di Kalimantan Barat</strong> serta telah banyak berkontribusi menghadirkan Lulusan yang mampu memimpin, berkarya dan berprestasi bagi Keadilan Sosial seluruh Rakyat Indonesia.</p>
+      <div class="akrin-cards">
+        <div class="akrin-card">
+          <a href="https://garuda.kemdiktisaintek.go.id/publisher/view/44?q=publika">Responsive</a>
+          <span>Tanggap Peluang &amp; Tantangan Zaman</span>
+        </div>
+        <div class="akrin-card">
+          <a href="https://jurmafis.untan.ac.id/">Quality</a>
+          <span>Mutu UNGGUL / Akreditasi Internasional</span>
+        </div>
+        <div class="akrin-card">
+          <a href="https://sinta.kemdiktisaintek.go.id/journals/profile/10550">Support</a>
+          <span>Insan berahlak multitalenta berinovasi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KABAR FISIP UNTAN -->
+    <div class="section-heading">
+      <h2><i class="fa fa-newspaper"></i> KABAR FISIP UNTAN</h2>
+      <p>Rilis berita aktivitas, karya dan prestasi civitas akademika FISIP Universitas Tanjungpura</p>
+    </div>
+
+    <div class="news-grid">
+
+      <!-- FEATURED -->
+      <div class="news-card featured">
+        <div class="card-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2025/01/Kerjasama-FISIP-Untan-dengan-Friedensau-Adventist-University-Jerman-1-360x240.jpg"
+               alt="Kerjasama Friedensau"
+               onerror="this.src='https://via.placeholder.com/480x310/0a2254/ffffff?text=FISIP+UNTAN'">
+        </div>
+        <div class="card-body">
+          <span class="cat-label">BERITA</span>
+          <h3><a href="https://fisip.untan.ac.id/?p=8002">Fisip Untan Bermitra Friedensau Adventist University Jerman</a></h3>
+          <p class="card-excerpt">Pontianak, FISIPUNTAN. Fisip Untan Bermitra Friedensau Adventist University Jerman. Fakultas Ilmu Sosial dan Ilmu Politik (FISIP) Universitas Tanjungpura (Untan) melakukan langkah strategis dalam pengembangan kerja sama internasional.</p>
+          <a href="https://fisip.untan.ac.id/?p=8002" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="card-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2025/01/KKM-FISIP-UNTAN-2025-360x240.webp" alt="KKM 2025" onerror="this.src='https://via.placeholder.com/360x240/1a4a00/ffffff?text=KKM+2025'">
+        </div>
+        <div class="card-body">
+          <span class="cat-label">BERITA</span>
+          <h3><a href="https://fisip.untan.ac.id/?p=7997">193 Mahasiswa FISIP Untan Berkolaborasi Bangun Desa</a></h3>
+          <p class="card-excerpt">Sanggau, FISIPUNTAN. 193 Mahasiswa FISIP Untan Berkolaborasi Bangun Desa. FISIP Untan secara resmi melepas 193 mahasiswa yang akan menjalankan KKM T.A. 2024/2025.</p>
+          <a href="https://fisip.untan.ac.id/?p=7997" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="card-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/12/wsakreinternasional-360x240.webp" alt="SAR ACQUIN" onerror="this.src='https://via.placeholder.com/360x240/4a1a00/ffffff?text=SAR+ACQUIN'">
+        </div>
+        <div class="card-body">
+          <span class="cat-label">BERITA</span>
+          <h3><a href="https://fisip.untan.ac.id/?p=7915">Workshop Penyusunan Self Assessment Report (SAR) ACQUIN Prodi Administrasi Publik</a></h3>
+          <p class="card-excerpt">Pontianak.FISIPUNTAN. FISIP UNTAN menyelenggarakan Workshop Penyusunan Self Assessment Report (SAR) ACQUIN untuk Program Studi Administrasi Publik.</p>
+          <a href="https://fisip.untan.ac.id/?p=7915" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="card-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2016/04/DSC_2135.jpg" alt="Alumni 2024" onerror="this.src='https://via.placeholder.com/360x240/003380/ffffff?text=Alumni+2024'">
+        </div>
+        <div class="card-body">
+          <span class="cat-label">BERITA</span>
+          <h3><a href="https://fisip.untan.ac.id/?p=8288">Alumni FISIP Periode 2024</a></h3>
+          <p class="card-excerpt">Alumni FISIP Periode 2024 Lulusan FISIP Untan Cemerlang. Lulusan FISIP Untan ada yang memilih Bekerja, Berwirausaha, dan Melanjutkan Studi.</p>
+          <a href="https://fisip.untan.ac.id/?p=8288" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="card-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2023/09/wanabot.jpg" alt="PPID" onerror="this.src='https://via.placeholder.com/360x240/003a3a/ffffff?text=PPID'">
+        </div>
+        <div class="card-body">
+          <span class="cat-label">BERITA</span>
+          <h3><a href="https://fisip.untan.ac.id/?p=7703">Update PPID Pelaksana UNTAN</a></h3>
+          <p class="card-excerpt">Pontianak. FISIPUNTAN. Salam Informasi. Update PPID Pelaksana UNTAN pengelola informasi fisip universitas tanjungpura memiliki peran penting dalam memberikan informasi kepada publik.</p>
+          <a href="https://fisip.untan.ac.id/?p=7703" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="card-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/10/mbkm-2024-edited-scaled-1-360x240.jpeg" alt="MBKM 2024" onerror="this.src='https://via.placeholder.com/360x240/1a005a/ffffff?text=MBKM+2024'">
+        </div>
+        <div class="card-body">
+          <span class="cat-label">BERITA</span>
+          <h3><a href="https://fisip.untan.ac.id/?p=7685">Peluncuran MBKM Periode 2024</a></h3>
+          <p class="card-excerpt">Pontianak, FISIP. MBKM FISIP UNTAN 2024 skema mandiri untuk kegiatan Magang diikuti 301 mahasiswa peserta yang tersebar di 60 instansi mitra di wilayah kota Pontianak dan Kabupaten Kubu Raya.</p>
+          <a href="https://fisip.untan.ac.id/?p=7685" class="read-more">Read more</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AGENDA KEGIATAN -->
+    <div class="section-heading">
+      <h2><i class="fa fa-calendar-alt"></i> Agenda Kegiatan</h2>
+      <p>Informasi Kegiatan Civitas Akademika Pendukung IKU</p>
+    </div>
+    <div class="agenda-section">
+      <div class="agenda-grid">
+        <div class="dekan-img">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/03/ws.dekan-removebg-preview.png" alt="Dekan FISIP UNTAN">
+        </div>
+        <div>
+          <div class="agenda-gallery">
+            <a href="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdF2-1024x768-1.jpg" target="_blank">
+              <img src="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdF2-1024x768-1.jpg" alt="Gedung F">
+            </a>
+            <a href="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdE-1024x768-1.jpg" target="_blank">
+              <img src="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdE-1024x768-1.jpg" alt="Gedung E">
+            </a>
+            <a href="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdD-1024x768-1.jpg" target="_blank">
+              <img src="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdD-1024x768-1.jpg" alt="Gedung D">
+            </a>
+            <a href="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdB-1024x768-1.jpg" target="_blank">
+              <img src="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdB-1024x768-1.jpg" alt="Gedung B">
+            </a>
+            <a href="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdA-1024x768-1.jpg" target="_blank">
+              <img src="https://fisip.untan.ac.id/wp-content/uploads/2021/08/gdA-1024x768-1.jpg" alt="Gedung A">
+            </a>
+          </div>
+          <div class="agenda-caption">Sarana Prasarana Fisip Untan</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Tautan FISIP -->
+    <div class="widget">
+      <div class="widget-header"><i class="fa fa-link"></i> Tautan FISIP</div>
+      <div class="widget-body no-pad">
+        <ul class="quick-links">
+          <li><a href="https://pddikti.kemdikbud.go.id/"><i class="fa fa-external-link-alt"></i> PD Dikti</a></li>
+          <li><a href="http://www.untan.ac.id"><i class="fa fa-external-link-alt"></i> Untan</a></li>
+          <li><a href="https://ppid.fisipuntan.org/"><i class="fa fa-external-link-alt"></i> PPID</a></li>
+          <li><a href="https://10.46.8.79/fisipuntan/"><i class="fa fa-external-link-alt"></i> FISIPNew</a></li>
+          <li><a href="https://fisipuntan.org"><i class="fa fa-external-link-alt"></i> WebProdi</a></li>
+          <li><a href="https://ikom.fisip.untan.ac.id/"><i class="fa fa-external-link-alt"></i> Ikom</a></li>
+          <li><a href="https://d3.fisip.untan.ac.id"><i class="fa fa-external-link-alt"></i> Diploma</a></li>
+          <li><a href="https://jurmafis.untan.ac.id" title="Jurnal Masyarakat Akademis Fisip"><i class="fa fa-external-link-alt"></i> OJSFISIP</a></li>
+          <li><a href="https://fisip.untan.ac.id/?page_id=536"><i class="fa fa-external-link-alt"></i> Arjuna</a></li>
+          <li><a href="https://fisip.untan.in/lab.ilmu-administrasi/"><i class="fa fa-external-link-alt"></i> LABFISIP</a></li>
+          <li><a href="https://kuliah.fisipuntan.org"><i class="fa fa-external-link-alt"></i> Elfista</a></li>
+          <li><a href="https://pustakafisip.untan.ac.id/"><i class="fa fa-external-link-alt"></i> Pustaka</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Archives -->
+    <div class="widget">
+      <div class="widget-header"><i class="fa fa-archive"></i> Archives</div>
+      <div class="widget-body no-pad">
+        <ul class="archives-list">
+          <li><a href="#">January 2025 (2)</a></li>
+          <li><a href="#">December 2024 (1)</a></li>
+          <li><a href="#">November 2024 (1)</a></li>
+          <li><a href="#">October 2024 (2)</a></li>
+          <li><a href="#">September 2024 (1)</a></li>
+          <li><a href="#">August 2024 (1)</a></li>
+          <li><a href="#">June 2024 (2)</a></li>
+          <li><a href="#">May 2024 (3)</a></li>
+          <li><a href="#">March 2024 (3)</a></li>
+          <li><a href="#">February 2024 (3)</a></li>
+          <li><a href="#">December 2023 (1)</a></li>
+          <li><a href="#">November 2023 (4)</a></li>
+          <li><a href="#">October 2023 (6)</a></li>
+          <li><a href="#">September 2023 (5)</a></li>
+          <li><a href="#">July 2023 (1)</a></li>
+          <li><a href="#">May 2023 (2)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ranking -->
+    <div class="widget">
+      <div class="widget-header"><i class="fa fa-chart-bar"></i> Ranking Untan</div>
+      <div class="widget-body">
+        <table class="rank-table">
+          <tr><td colspan="2"><a href="https://www.4icu.org/reviews/2218.htm" target="_blank" style="color:#0a2254;font-size:12px;">Universitas Tanjungpura's Ranking and Review</a></td></tr>
+          <tr><td>Country rank</td><td><a href="https://www.4icu.org/reviews/2218.htm" target="_blank" style="color:#e8a000;font-weight:700;">58</a></td></tr>
+          <tr><td>World rank</td><td><a href="https://www.4icu.org/reviews/2218.htm" target="_blank" style="color:#e8a000;font-weight:700;">3802</a></td></tr>
+        </table>
+        <p style="font-size:11px;color:#888;margin-top:10px;font-style:italic;font-weight:700;">GEMPUR: "Gerakan Edukasi Masyarakat Peduli Untan Rank"</p>
+      </div>
+    </div>
+
+    <!-- Flag Counter -->
+    <div class="widget">
+      <div class="widget-header"><i class="fa fa-flag"></i> Visits since Januari 2014</div>
+      <div class="widget-body" style="text-align:center">
+        <a href="https://info.flagcounter.com/t8lU" target="_blank">
+          <img src="https://s11.flagcounter.com/count2/t8lU/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_10/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter">
+        </a>
+        <p style="font-size:11px;color:#888;margin-top:6px;">FISIP Universitas Tanjungpura</p>
+      </div>
+    </div>
+
+    <!-- Video Prestasi -->
+    <div class="widget">
+      <div class="widget-header"><i class="fa fa-video"></i> Video Prestasi</div>
+      <div class="widget-body presma-box">
+        <a href="https://www.youtube.com/watch?v=Cma2rvbRiiU" target="_blank">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/10/WhatsApp-Image-2024-09-20-at-10.48.13.jpeg" alt="Video Prestasi FISIP" onerror="this.src='https://via.placeholder.com/270x175/0a2254/fff?text=Video+Prestasi'">
+        </a>
+        <a href="https://www.youtube.com/watch?v=6h__0pvLPrc" target="_blank">
+          <img src="https://fisip.untan.ac.id/wp-content/uploads/2024/08/2024_Prema_Pemsos.jpeg" alt="Juara Cinematography" onerror="this.src='https://via.placeholder.com/270x175/6a1a00/fff?text=Juara+Cinematic'">
+        </a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h3>FISIP UNTAN</h3>
+      <div style="margin-bottom:12px">
+        <img src="https://fisip.untan.ac.id/wp-content/uploads/2022/11/removal.ai_tmp-63738be724d04.png" alt="Logo FISIP UNTAN" style="height:60px;width:auto;display:block">
+      </div>
+      <p>Fakultas Ilmu Sosial dan Ilmu Politik Universitas Tanjungpura (FISIP UNTAN) berkomitmen menjadi Pusat Informasi di Bidang Ilmu Sosial, Politik dan Budaya di Kalimantan Barat.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Navigasi</h3>
+      <ul>
+        <li><a href="https://fisip.untan.ac.id/"><i class="fa fa-angle-right"></i> Beranda</a></li>
+        <li><a href="https://fisip.untan.ac.id/?page_id=751"><i class="fa fa-angle-right"></i> Profil</a></li>
+        <li><a href="https://fisip.untan.ac.id/?cat=23"><i class="fa fa-angle-right"></i> Info / Berita</a></li>
+        <li><a href="https://fisip.untan.ac.id/?tag=featured"><i class="fa fa-angle-right"></i> Layanan</a></li>
+        <li><a href="https://fisip.untan.ac.id/?tag=alumni"><i class="fa fa-angle-right"></i> Alumni</a></li>
+        <li><a href="https://fisip.untan.ac.id/?page_id=5869"><i class="fa fa-angle-right"></i> Dokumen</a></li>
+        <li><a href="https://fisip.untan.ac.id/?tag=zona-integritas"><i class="fa fa-angle-right"></i> WBBM</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Layanan Online</h3>
+      <ul>
+        <li><a href="https://satu.untan.ac.id/gate/login"><i class="fa fa-external-link-alt"></i> SIAKAD</a></li>
+        <li><a href="https://scmb.untan.ac.id/"><i class="fa fa-external-link-alt"></i> PMB</a></li>
+        <li><a href="https://kuliah.fisipuntan.org"><i class="fa fa-external-link-alt"></i> E-Learning Elfista</a></li>
+        <li><a href="https://pustakafisip.untan.ac.id/"><i class="fa fa-external-link-alt"></i> Pustaka FISIP</a></li>
+        <li><a href="https://jurmafis.untan.ac.id"><i class="fa fa-external-link-alt"></i> Jurnal FISIP</a></li>
+        <li><a href="https://tracerstudyalumni.untan.ac.id/login"><i class="fa fa-external-link-alt"></i> Tracer Study</a></li>
+        <li><a href="https://ppid.fisipuntan.org/"><i class="fa fa-external-link-alt"></i> PPID FISIP</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Kontak</h3>
+      <ul>
+        <li><a href="#"><i class="fa fa-map-marker-alt"></i> Jl. Prof. Dr. H. Hadari Nawawi, Pontianak 78124, Kalimantan Barat</a></li>
+        <li><a href="https://www.untan.ac.id"><i class="fa fa-globe"></i> www.untan.ac.id</a></li>
+        <li><a href="https://fisip.untan.ac.id/"><i class="fa fa-globe"></i> fisip.untan.ac.id</a></li>
+        <li><a href="https://fisipuntan.org"><i class="fa fa-globe"></i> fisipuntan.org</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Hestia | Developed by <a href="https://themeisle.com" target="_blank">ThemeIsle</a></p>
+    <p style="margin-top:4px;">&copy;2014–2024 | Developed by <a href="https://untan.ac.id" target="_blank">Dendar FISIP UNTAN</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const slides=document.querySelectorAll('#mainSlider .slide');
+  const dots=document.querySelectorAll('#sliderDots .slider-dot');
+  let cur=0,timer;
+  function goTo(n){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur=(n+slides.length)%slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+  }
+  function play(){timer=setInterval(()=>goTo(cur+1),5500)}
+  document.getElementById('sliderPrev').onclick=()=>{clearInterval(timer);goTo(cur-1);play()};
+  document.getElementById('sliderNext').onclick=()=>{clearInterval(timer);goTo(cur+1);play()};
+  dots.forEach(d=>d.onclick=()=>{clearInterval(timer);goTo(+d.dataset.i);play()});
+  play();
+})();
+</script>
+
+</body>
+</html>
